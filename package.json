@@ -1,6 +1,9 @@
 {
   "name": "medicine-delivery-api",
   "type": "module",
+  "engines": {
+    "node": "18.16"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
