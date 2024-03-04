@@ -5,12 +5,12 @@ import MedicinesController from "../controllers/medicinesControllers.js";
 const router = express.Router();
 const jsonParser = express.json();
 
-router.get("/", MedicinesController.getMedicines);
+router.get("/:shop/medicines", MedicinesController.getMedicines);
 
-router.get("/:id", MedicinesController.getMedicine);
+router.get("/:shop/medicines/:id", MedicinesController.getMedicine);
 
 router.patch(
-  "/:id/favorite",
+  "/:shop/medicines/:id/favorite",
   jsonParser,
   MedicinesController.updateMedicineStatus
 );
